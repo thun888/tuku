@@ -635,7 +635,6 @@
 .mdui-theme-primary-pink .mdui-color-theme-50 {
   color: rgba(0, 0, 0, .87) !important;
   background-color: #fce4ec !important;
-}
 .mdui-theme-primary-pink .mdui-color-theme-100 {
   color: rgba(0, 0, 0, .87) !important;
   background-color: #f8bbd0 !important;
@@ -5151,7 +5150,7 @@ body.mdui-locked {
   font-style: normal;
   font-weight: 400;
 
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url(../icons/material-icons/MaterialIcons-Regular.woff2) format('woff2'), url(../icons/material-icons/MaterialIcons-Regular.woff) format('woff');
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(../MaterialIcons-Regular.woff2) format('woff2'), url(../MaterialIcons-Regular.woff) format('woff');
 }
 .material-icons {
   font-family: 'Material Icons';
