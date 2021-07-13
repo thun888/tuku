@@ -3196,7 +3196,7 @@ function(e, t) {
 							if (!t) t = this.el;
 							var n = t.querySelector(".artalk-loading");
 							if (!n) {
-								n = d["default"].createElement('<div class="artalk-loading" style="display: none;"><div class="artalk-loading-spinner"><svg viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle></svg><span>take a while</span></div></div>');
+								n = d["default"].createElement('<div class="artalk-loading" style="display: none;"><div class="artalk-loading-spinner"><svg viewBox="25 25 50 50"><circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle></svg></div><span>take a while</span></div>');
 								t.appendChild(n)
 							}
 							n.style.display = ""
