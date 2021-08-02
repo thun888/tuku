@@ -6,12 +6,14 @@ let res
     }
   document.getElementById("searchbtn").disabled=true;
 	document.getElementById("searchbtn").innerHTML='<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Please wait...';
-  if(document.querySelector("#dir").value!=="") {
+
+  if(document.querySelector("#dir").value!==""){
   fetch(window.location.pathname, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ url: document.querySelector("#text").value,dir: document.querySelector("#dir").value,cust: "1" })
   }).then(function(response) {return response.json();})
+
   .then(function(myJson) {
     res = myJson;
     document.getElementById("searchbtn").disabled=false;
@@ -20,6 +22,11 @@ let res
     document.getElementById("result").innerHTML=window.location.host+res.key;
     $('#exampleModal').modal('show')
   }).catch(function(err){alert("Unknow error. Please retry!");
+  console.log(err);
+  if(res.key=="/undefined")
+  document.getElementById("result").innerHTML="已存在相同的自定义链接";
+    $('#exampleModal').modal('show')
+  }).catch(function(err){alert("已存在相同的自定义链接");
   console.log(err);
   document.getElementById("searchbtn").disabled=false;
 	document.getElementById("searchbtn").innerHTML=' Shorten it';})
@@ -80,6 +87,11 @@ if(document.querySelector("#dir").value=="")
     document.getElementById("result").innerHTML=window.location.host+res.key;
     $('#exampleModal').modal('show')
   }).catch(function(err){alert("Unknow error. Please retry!");
+  console.log(err);
+  if(res.key=="/undefined")
+  document.getElementById("result").innerHTML="已存在相同的自定义链接";
+    $('#exampleModal').modal('show')
+  }).catch(function(err){alert("已存在相同的自定义链接");
   console.log(err);
   document.getElementById("searchbtn").disabled=false;
 	document.getElementById("searchbtn").innerHTML=' Shorten it';})
