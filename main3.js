@@ -11,15 +11,13 @@ let res
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ url: document.querySelector("#text").value })
-    }).then(function(response) {
-      return response.json();
-    })
-    if(document.querySelector("#dir").value!=="")
-      fetch(window.location.pathname, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url: document.querySelector("#text").value,dir: document.querySelector("#dir").value,cust: "1" })
-      }).then(function(response) {return response.json();})
+    }).then(function(response) {return response.json();})
+  else
+    fetch(window.location.pathname, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url: document.querySelector("#text").value,dir: document.querySelector("#dir").value,cust: "1" })
+    }).then(function(response) {return response.json();})
 
   .then(function(myJson) {
     res = myJson;
