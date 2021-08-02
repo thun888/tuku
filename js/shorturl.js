@@ -17,11 +17,11 @@ let res
   .then(function(myJson) {
     res = myJson;
     document.getElementById("searchbtn").disabled=false;
-	document.getElementById("searchbtn").innerHTML=' Shorten it';
+	document.getElementById("searchbtn").innerHTML='短！';
     if(res.key!=="")
     document.getElementById("result").innerHTML=window.location.host+res.key;
     $('#exampleModal').modal('show')
-  }).catch(function(err){alert("Unknow error. Please retry!");
+  }).catch(function(err){alert("未知错误，再试一遍");
   console.log(err);
   if(res.key=="/undefined")
   document.getElementById("result").innerHTML="已存在相同的自定义链接";
@@ -29,7 +29,7 @@ let res
   }).catch(function(err){alert("已存在相同的自定义链接");
   console.log(err);
   document.getElementById("searchbtn").disabled=false;
-	document.getElementById("searchbtn").innerHTML=' Shorten it';})
+	document.getElementById("searchbtn").innerHTML='短！';})
   }
   function copyurl (id, attr) {
     let target = null;
@@ -82,11 +82,11 @@ if(document.querySelector("#dir").value=="")
   .then(function(myJson) {
     res = myJson;
     document.getElementById("searchbtn").disabled=false;
-	document.getElementById("searchbtn").innerHTML=' Shorten it';
+	document.getElementById("searchbtn").innerHTML='短！';
     if(res.key!=="")
     document.getElementById("result").innerHTML=window.location.host+res.key;
     $('#exampleModal').modal('show')
-  }).catch(function(err){alert("Unknow error. Please retry!");
+  }).catch(function(err){alert("未知错误，再试一遍");
   console.log(err);
   if(res.key=="/undefined")
   document.getElementById("result").innerHTML="已存在相同的自定义链接";
@@ -94,7 +94,7 @@ if(document.querySelector("#dir").value=="")
   }).catch(function(err){alert("已存在相同的自定义链接");
   console.log(err);
   document.getElementById("searchbtn").disabled=false;
-	document.getElementById("searchbtn").innerHTML=' Shorten it';})
+	document.getElementById("searchbtn").innerHTML='短！';})
   }
   function copyurl (id, attr) {
     let target = null;
