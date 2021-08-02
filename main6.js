@@ -4,20 +4,24 @@ let res
         alert("url不能为空！")
         return
     }
-    document.getElementById("searchbtn").disabled=true;
+  document.getElementById("searchbtn").disabled=true;
 	document.getElementById("searchbtn").innerHTML='<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Please wait...';
-  if(document.querySelector("#dir").value!=="")
+  if(document.querySelector("#dir").value!=="") {
   fetch(window.location.pathname, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ url: document.querySelector("#text").value,dir: document.querySelector("#dir").value,cust: "1" })
   }).then(function(response) {return response.json();})
-  else
+  
+
+}else{
+
   fetch(window.location.pathname, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ url: document.querySelector("#text").value })
-  }).then(function(response) {return response.json();})
+  }).then(function(response) {return response.json();})}
+
 
   .then(function(myJson) {
     res = myJson;
@@ -69,8 +73,3 @@ let res
   $(function () {
     $('[data-toggle="popover"]').popover()
   })
-  console.log("https://github.com/xyTom/Url-Shorten-Worker/")
-  let notice="Notice: This service is for demonstration purposes only and the generated short links will automatically expire after 24 hours."
-  if(window.location.host=="5it.me"){
-    document.getElementById("notice").innerHTML=notice
-  }
