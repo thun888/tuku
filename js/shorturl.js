@@ -5,8 +5,10 @@ let res
         return
     }
   document.getElementById("searchbtn").disabled=true;
-	document.getElementById("searchbtn").innerHTML='<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Please wait...';
+	document.getElementById("searchbtn").innerHTML='<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>稍等';
 
+//不要问我为什么这样写，我也不懂
+//No why,I don't know.
   if(document.querySelector("#dir").value!==""){
   fetch(window.location.pathname, {
     method: 'POST',
@@ -56,9 +58,9 @@ let res
         window.getSelection().addRange(range);
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
-        console.log('Copy success')
+        console.log('复制成功')
     } catch (e) {
-        console.log('Copy error')
+        console.log('复制失败')
     }
 
     if (attr) {
@@ -121,9 +123,9 @@ if(document.querySelector("#dir").value=="")
         window.getSelection().addRange(range);
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
-        console.log('Copy success')
+        console.log('复制成功')
     } catch (e) {
-        console.log('Copy error')
+        console.log('复制失败')
     }
 
     if (attr) {
