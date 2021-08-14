@@ -1,7 +1,7 @@
 let res
   function gettxt() {
     if(document.querySelector("#text").value==""){
-        alert("?") 
+        alert("给码啊喂") 
         return
     }
   document.getElementById("searchbtn").disabled=true;
