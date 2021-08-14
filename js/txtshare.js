@@ -20,7 +20,6 @@ let res
 	document.getElementById("searchbtn").innerHTML=' Shorten it';
     if(res.key!=="")
     document.getElementById("result").innerHTML="您的取件码为："+res.key;
-    document.getElementById("gresult").innerHTML="您的取件码为："+res.key;
     document.getElementById("fzresult").innerHTML="https://txtshare.thun888.xyz/get/"+res.key;
     $('#exampleModal').modal('show')
   }).catch(function(err){alert("Unknow error. Please retry!");
