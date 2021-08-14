@@ -1,7 +1,7 @@
 let res
   function shorttxt() {
     if(document.querySelector("#text").value==""){
-        alert("Url cannot be empty!")
+        alert("内容不能为空")
         return
     }
 
