@@ -7,7 +7,7 @@ let res
   document.getElementById("searchbtn").disabled=true;
 	document.getElementById("searchbtn").innerHTML='<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>稍等';
   let more = document.querySelector("#text").value
-  let url = "https://txtshare.thun888.xyz/"
+  let url = "https://txt.thun888.xyz/"
   let path = url.concat(more); 
   var httpRequest = new XMLHttpRequest();
   httpRequest.open('GET', path, true);
