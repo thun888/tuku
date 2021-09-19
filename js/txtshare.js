@@ -21,7 +21,7 @@ let res
     if(res.key!=="")
     document.getElementById("result").innerHTML="您的取件码为："+res.key;
     document.getElementById("fzresult").innerHTML="https://txt.thun888.xyz/get/"+res.key;
-    document.getElementById("qrcode").src="https://qrcode.thun888.workers.dev/qz=1/?"+back;
+    document.getElementById("qrcode").src="https://qrcode.thun888.workers.dev/qz=1/?https://txt.thun888.xyz/get/"+res.key;
     $('#exampleModal').modal('show')
   }).catch(function(err){alert("Unknow error. Please retry!");
   console.log(err);
