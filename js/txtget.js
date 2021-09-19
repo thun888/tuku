@@ -5,7 +5,7 @@ let res
         return
     }
   document.getElementById("searchbtn").disabled=true;
-	document.getElementById("searchbtn").innerHTML='<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>稍等';
+  document.getElementById("searchbtn").innerHTML='<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>稍等';
   let more = document.querySelector("#text").value
   let url = "https://txt.thun888.xyz/"
   let path = url.concat(more); 
@@ -19,6 +19,10 @@ let res
         console.log(httpRequest.status);
     document.getElementById("result").innerHTML=""+back;
     $('#exampleModal').modal('show')
+
+    document.getElementById("searchbtn").disabled=false;
+    document.getElementById("searchbtn").innerHTML=' 接收文本'
+    document.getElementById("qrcode").src="https://qrcode.thun888.workers.dev/qz=1/?"+back;
 }else if (httpRequest.status == 404) {
   alert("没有对应文本");
   document.getElementById("searchbtn").disabled=false;
