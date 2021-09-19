@@ -22,7 +22,6 @@ let res
 
     document.getElementById("searchbtn").disabled=false;
     document.getElementById("searchbtn").innerHTML=' 接收文本'
-    document.getElementById("qrcode").src="https://qrcode.thun888.workers.dev/qz=1/?"+back;
 }else if (httpRequest.status == 404) {
   alert("没有对应文本");
   document.getElementById("searchbtn").disabled=false;
