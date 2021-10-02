@@ -1,5 +1,5 @@
 "use strict";
-
+console.log("%c\n           ", "font-size:65px;background:url('https://cdn.jsdelivr.net/gh/thun888/tuku@master/img/%E6%B0%B4%E5%8D%B01.png') no-repeat");
 /**
  * Initializes uptime, labels and chart values
  */
