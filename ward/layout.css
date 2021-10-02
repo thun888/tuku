@@ -596,7 +596,7 @@ body
     position: absolute;
     right: 0;
     bottom: 0;
-    height: var(--height-usage-underline);
+    height: 0.2rem;
     width: var(--width-usage-underline);
 }
 
@@ -941,7 +941,7 @@ body
     display: inline-block;
     margin-right: var(--margin-right-labels-grid-div);
     margin-bottom: var(--margin-bottom-labels-grid-div);
-    height: var(--height-labels-grid-div);
+    height: 1.1rem;
     width: var(--width-labels-grid-div);
     text-align: center;
     font-size: var(--font-size-9pt);
