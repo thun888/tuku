@@ -836,7 +836,7 @@ body
 
 .contacts-description > .second
 {
-    top: var(--top-contacts-description-second);
+    top: 4.5;
 }
 
 .contacts-links > a > img
